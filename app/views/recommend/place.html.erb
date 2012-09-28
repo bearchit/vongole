@@ -1,2 +1,13 @@
-<h1>Recommend#place</h1>
-<p>Find me in app/views/recommend/place.html.erb</p>
+<% if @menus.blank? %>
+  <h1>음식점 정보 좀 넣어주세요~</h1>
+<% else %>
+  <ul data-role="listview" data-divider-theme="b" data-inset="true">
+    <% @restaurants.each do |restaurant| %>
+      <li data-theme="c">
+        <a href="#" data-transition="slide">
+          <%= restaurant.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

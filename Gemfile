@@ -24,8 +24,7 @@ end
 gem 'jquery-rails'
 
 # jQuery Mobile
-gem 'jquery_mobile_rails'
-
+gem 'jquery_mobile_rails', :git => "git://github.com/cyrret/jquery-mobile-rails.git", :branch => '1.2.0-rc.2'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

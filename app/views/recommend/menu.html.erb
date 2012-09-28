@@ -1,2 +1,13 @@
-<h1>Recommend#menu</h1>
-<p>Find me in app/views/recommend/menu.html.erb</p>
+<% if @menus.blank? %>
+  <h1>죄송합니다. 메뉴 좀 모아볼께요 ㅠ</h1>
+<% else %>
+  <ul data-role="listview" data-divider-theme="b" data-inset="true">
+    <% @menus.each do |menu| %>
+      <li data-theme="c">
+        <a href="#" data-transition="slide">
+          <%= menu.name %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,49 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-    </title>
-    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-    <link rel="stylesheet" href="my.css" />
-    <style>
-      /* App custom styles */
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-    </script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
-    </script>
-    <script src="my.js">
-    </script>
-  </head>
-  <body>
-    <!-- Home -->
-    <div data-role="page" id="page1">
-      <div data-theme="b" data-role="header">
-        <h3>
-          Vongole
-        </h3>
-      </div>
-      <div data-role="content">
-        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+  <li data-theme="c">
+    <a href="<%= menu_path %>" data-transition="slide">
+      <h3 class="ui-li-heading">뭐 먹을까?</h3>
+      <p class="ui-li-desc">먹고 싶은 메뉴들을 골라보세요</p>
+      <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">328</span>
+    </a>
+  </li>
 
-          <li data-theme="c">
-            <a href="#" data-transition="slide">
-              뭐 먹을까?
-            </a>
-          </li>
-
-          <li data-theme="c">
-            <a href="#" data-transition="slide">
-              어디서 먹을까?
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <script>
-      //App custom javascript
-    </script>
-  </body>
-</html>
+  <li data-theme="c">
+    <a href="<%= place_path %>" data-transition="slide">
+      <h3 class="ui-li-heading">어디서 먹을까?</h3>
+      <p class="ui-li-desc">괜춘한 음식점들을 소개해 드립니다</p>
+      <span class="ui-li-count ui-btn-up-c ui-btn-corner-all">54</span>
+    </a>
+  </li>
+</ul>
