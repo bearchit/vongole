@@ -2,10 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
+gem 'thin'
+
+gem 'mongoid', '~> 3.0.0'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +23,10 @@ end
 
 gem 'jquery-rails'
 
+# jQuery Mobile
+gem 'jquery_mobile_rails'
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -33,5 +39,12 @@ gem 'jquery-rails'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'debugger'
+# Debug
+group :development do
+  gem 'debugger'
+end
+
+# Tesing
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
