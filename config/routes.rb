@@ -1,11 +1,11 @@
 Vongole::Application.routes.draw do
 
-  root :to => 'home#entrance'
+  root :to => 'recommend#menu'
 
   # Recommend
   match 'menu' => 'recommend#menu'
   match 'place' => 'recommend#place'
-  match 'menu/pick' => 'recommend#pick_menu'
-  match 'place/pick' => 'recommend#pick_place'
+  match 'pick/menu' => 'recommend#pick_menu'
+  match 'pick/place' => 'recommend#pick_place'
 
 end
