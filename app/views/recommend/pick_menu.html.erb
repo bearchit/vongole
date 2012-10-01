@@ -1,2 +1,15 @@
-<h1>Recommend#pick_menu</h1>
-<p>Find me in app/views/recommend/pick_menu.html.erb</p>
+<h1><%= @menu.name %></h1>
+
+<% unless @menu.restaurants.blank? %>
+
+  <ul data-role="listview" data-divider-theme="b" data-inset="true">
+    <% @menu.restaurants.each do |restaurant| %>
+      <li data-theme="c">
+        <a href="#">
+          <%= restaurant.name %>
+        </a>
+      </li>
+    <% end %>    
+  </ul>
+       
+<% end %>
