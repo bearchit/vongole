@@ -1,6 +1,8 @@
 <% if @restaurants.blank? %>
   <h1>음식점 정보 좀 넣어주세요~</h1>
 <% else %>
+  <a href="<%= pick_place_path %>" data-role="button">골라줘</a>
+  
   <ul data-role="listview" data-divider-theme="b" data-inset="true">
     <% @restaurants.each do |restaurant| %>
       <li data-theme="c">
