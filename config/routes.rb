@@ -1,5 +1,10 @@
 Vongole::Application.routes.draw do
 
+  # Administration
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  devise_for :users
+
+  # Root
   root :to => 'home#entrance'
 
   # Recommend

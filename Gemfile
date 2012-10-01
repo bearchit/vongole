@@ -47,3 +47,7 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
 end
+
+# Administration
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem "devise"
