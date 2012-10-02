@@ -5,12 +5,18 @@ Vongole::Application.routes.draw do
   devise_for :users
 
   # Root
-  root :to => 'recommend#menu'
+  root :to => 'menus#index'
 
   # Recommend
-  match 'menu' => 'recommend#menu'
-  match 'place' => 'recommend#place'
-  match 'pick/menu' => 'recommend#pick_menu'
-  match 'pick/place' => 'recommend#pick_place'
+  get 'recommend/menu'
+  get 'recommend/place'
+  get 'recommend/pick_menu'
+  get 'recommend/pick_place'
+
+  # Menu
+  resources :menus, except: [:new, :edit]
+
+  # Restaurant
+  resources :restaurants, except: [:new, :edit,]
 
 end
