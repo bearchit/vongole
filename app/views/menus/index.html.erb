@@ -2,7 +2,7 @@
   <h1>죄송합니다. 메뉴 좀 모아볼께요 ㅠ</h1>
 <% else %>
 
-  <a href="<%= recommend_pick_menu_path %>" data-role="button">골라줘</a>
+  <a href="<%= recommend_menu_path %>" data-role="button">골라줘</a>
   
   <ul data-role="listview" data-divider-theme="b" data-inset="true">
     <% @menus.each do |menu| %>
@@ -14,3 +14,4 @@
     <% end %>
   </ul>
 <% end %>
+

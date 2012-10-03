@@ -9,9 +9,7 @@ Vongole::Application.routes.draw do
 
   # Recommend
   get 'recommend/menu'
-  get 'recommend/place'
-  get 'recommend/pick_menu'
-  get 'recommend/pick_place'
+  get 'recommend/restaurant'
 
   # Menu
   resources :menus, except: [:new, :edit]

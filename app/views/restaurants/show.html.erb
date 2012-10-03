@@ -1,2 +1,15 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1><%= @restaurant.name %></h1>
+
+<% unless @restaurant.menus.blank? %>
+
+  <ul data-role="listview" data-divider-theme="b" data-inset="true">
+    <% @restaurant.menus.each do |menu| %>
+      <li data-theme="c">
+        <a href="#">
+          <%= menu.name %>
+        </a>
+      </li>
+    <% end %>    
+  </ul>
+       
+<% end %>

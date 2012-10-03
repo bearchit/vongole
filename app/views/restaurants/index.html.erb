@@ -1,17 +1,17 @@
-<h1><%= @restaurant.name %></h1>
-<h2><%= @restaurant.address %></h2>
+<% if @restaurants.blank? %>
+  <h1>죄송합니다. 식당 좀 모아볼께요 ㅠ</h1>
+<% else %>
 
-<% unless @restaurant.menus.blank? %>
-
+  <a href="<%= recommend_restaurant_path %>" data-role="button">골라줘</a>
+  
   <ul data-role="listview" data-divider-theme="b" data-inset="true">
-    <% @restaurant.menus.each do |menu | %>
+    <% @restaurants.each do |restaurant| %>
       <li data-theme="c">
-        <a href="#">
-          <%= menu.name %>
+        <a href="<%= restaurant_path(restaurant) %>" data-transition="slide">
+          <%= restaurant.name %>
         </a>
       </li>
     <% end %>
   </ul>
-
 <% end %>
 
