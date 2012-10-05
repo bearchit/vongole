@@ -1,13 +1,9 @@
 class RecommendController < ApplicationController
   def menu
-    @menu = Menu.pick
-
-    render 'menus/show'
+    @menus = Menu.pick(2)
   end
 
   def restaurant
-    @restaurant = Restaurant.pick
-
-    render 'restaurants/show'
+    @restaurants = Restaurant.pick(2)
   end
 end

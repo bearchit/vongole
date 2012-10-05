@@ -1,0 +1,9 @@
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+  <% @menus.each do |menu| %>
+    <li data-theme="c">
+      <a href="<%= menu_path(menu) %>" data-transition="slide">
+        <%= menu.name %>
+      </a>
+    </li>
+  <% end %>  
+</ul>

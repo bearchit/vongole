@@ -19,8 +19,8 @@ class Restaurant
   # ============================================================
 
   class << self
-    def pick
-      Restaurant.all.shuffle.last
+    def pick(count)
+      Restaurant.all.shuffle[0...count]
     end
   end
 

@@ -14,8 +14,8 @@ class Menu
   # ============================================================
 
   class << self
-    def pick
-      Menu.all.shuffle.last
+    def pick(count)
+      Menu.all.shuffle[0...count]
     end
   end
 

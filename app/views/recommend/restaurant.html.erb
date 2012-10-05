@@ -1,0 +1,9 @@
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+  <% @restaurants.each do |restaurant| %>
+    <li data-theme="c">
+      <a href="<%= restaurant_path(restaurant) %>" data-transition="slide">
+        <%= restaurant.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
