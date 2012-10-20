@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vongole</title>
     <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= yield :page_specific_stylesheets %>
+    
     <%= javascript_include_tag "application" %>
+    <%= yield :page_specific_javascripts %>
+    
     <%= csrf_meta_tags %>
+    
   </head>
   <body>
     

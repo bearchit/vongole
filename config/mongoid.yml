@@ -22,7 +22,10 @@ production:
     default:
       database: vongole
       hosts:
-        - <%= ENV['MONGOHQ_URL'] %>
+        - alex.mongohq.com:10067
+      username: heroku
+      password: 733645008b70e51ed20e86ee9ff2c742
+        
       options:
         skip_version_check: true
         safe: true

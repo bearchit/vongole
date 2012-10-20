@@ -15,7 +15,4 @@ class RestaurantsController < ApplicationController
     
   end
 
-  def destroy
-    
-  end
 end
