@@ -6,7 +6,7 @@ set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
 role :web, "vps122.narru.net"                          # Your HTTP server, Apache/etc
-role :app, "vps122.narru.net"                          # This may be the same as your `Web` server
+role :app, "vps122.narru.net:12222"                    # This may be the same as your `Web` server
 role :db,  "vps122.narru.net", :primary => true # This is where Rails migrations will run
 # role :db,  "your slave db-server here"
 
