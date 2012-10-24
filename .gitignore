@@ -14,6 +14,9 @@
 /log/*.log
 /tmp
 
+TAGS
+/config/mongoid.yml
+
 *.rbc
 *.sassc
 .sass-cache
